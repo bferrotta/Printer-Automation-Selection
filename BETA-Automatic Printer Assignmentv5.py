@@ -3,7 +3,7 @@
 #This is a beta, trying to turn this into a exe file
 #no clue why pyinstaller doesnt work properly
 import subprocess, re, time, sys, os
-from colorama import Fore, Back, Style
+from colorama import Fore, Back, Style #I believe this is what is causing the issue in pyinstaller
 def main():
 	os.system('mode con: cols=130 lines=30')
 	command = 'wmic printer get name'
