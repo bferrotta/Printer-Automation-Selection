@@ -1,6 +1,7 @@
 #This is a program that looks for printers on your computer and allows the user to choose the default printer.
 #Created by: Brandon Ferrotta
 #This is a beta, trying to turn this into a exe file
+#no clue why pyinstaller doesnt work properly
 import subprocess, re, time, sys, os
 from colorama import Fore, Back, Style
 def main():
