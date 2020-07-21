@@ -47,16 +47,27 @@ def main():
 
 	print('\n  ------------------------------------------------------------------------------------------\n')
 	print('  Created by Brandon Ferrotta\n\n')
+	def selection1():
+		global tester
+		tester = True
+		while tester==True:
+			global selection
+			selection = int(input('  Enter number here, then press enter: '))
+			if selection >= listNum or selection < num:
+				print('\n------------------------------------------------------------------------------------------\n')
+				print('You have entered a number not in range, please try again.\n')
+			else:
+				tester=False
+	tester1 = True
+	while tester1 == True:
+		try:
+			selection1()
+			tester1 = False
+		except:
+			print("\n  ---------------------------------------------------------------------------------------------\n")
+			print("  Error! Please enter a number between 0-" + str(listNum) + '\n')
 
 
-	tester = True
-	while tester==True:
-		selection = int(input('  Enter number here, then press enter: '))
-		if selection >= listNum or selection < num:
-			print('\n------------------------------------------------------------------------------------------\n')
-			print('You have entered a number not in range, please try again.\n')
-		else:
-			tester=False
 	print(f'\n\nThe printer you selected is \'{printerList1[selection]}\'. Have a great day!')
 	command2 = 'RUNDLL32 PRINTUI.DLL,PrintUIEntry /y /n "' + printerList1[selection] + '"'
 	subprocess.run(command2)
