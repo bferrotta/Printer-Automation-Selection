@@ -32,13 +32,13 @@ def main():
 	printerList2 = reversed(printerList1)
 
 	num = listNum
-	print(Fore.RED + '    ___        _                        _   _       ______     _       _              _____      _           _   _             ')
+	print(Fore.BLUE + '    ___        _                        _   _       ______     _       _              _____      _           _   _             ')
 	print('   / _ \\      | |                      | | (_)      | ___ \\   (_)     | |            /  ___|    | |         | | (_)            ')
 	print('  / /_\\ \\_   _| |_ ___  _ __ ___   __ _| |_ _  ___  | |_/ / __ _ _ __ | |_ ___ _ __  \\ `--.  ___| | ___  ___| |_ _  ___  _ __  ')
 	print("  |  _  | | | | __/ _ \\| '_ ` _ \\ / _` | __| |/ __| |  __/ '__| | '_ \\| __/ _ \\ '__|  `--. \\/ _ \\ |/ _ \\/ __| __| |/ _ \\| '_ \\ ")
 	print('  | | | | |_| | || (_) | | | | | | (_| | |_| | (__  | |  | |  | | | | | ||  __/ |    /\\__/ /  __/ |  __/ (__| |_| | (_) | | | |')
 	print('  \\_| |_/\\__,_|\\__\\___/|_| |_| |_|\\__,_|\\__|_|\\___| \\_|  |_|  |_|_| |_|\\__\\___|_|    \\____/ \\___|_|\\___|\\___|\\__|_|\\___/|_| |_|')
-	print(Fore.RED + '  _____________________________________________________________________________________________________________________________\n' + Style.RESET_ALL)
+	print(Fore.BLUE + '  _____________________________________________________________________________________________________________________________\n' + Style.RESET_ALL)
 	print('  Welcome, please select a number for the printer you want to set as your default printer!\n')
 	print('  ------------------------------------------------------------------------------------------\n')
 	for printer in printerList2:
@@ -53,7 +53,7 @@ def main():
 			selection = int(input('  Enter number here, then press enter: '))
 			if selection >= listNum or selection < num:
 				print('\n------------------------------------------------------------------------------------------\n')
-				print('You have entered a number not in range, please try again.\n')
+				print(Fore.RED + '  You have entered a number not in range, please try again.\n' + Style.RESET_ALL)
 			else:
 				break
 
@@ -63,7 +63,7 @@ def main():
 			break
 		except:
 			print("\n  ---------------------------------------------------------------------------------------------\n")
-			print("  Error! Please enter a number between 0-" + str(listNum) + '\n')
+			print(Fore.RED + "  Error! Please enter a number between 0-" + str(listNum) + '\n' + Style.RESET_ALL)
 
 
 	print(f'\n\n  The printer you selected is \'{printerList1[selection]}\'. Have a great day!')
